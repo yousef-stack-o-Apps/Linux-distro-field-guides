@@ -33,6 +33,7 @@ A complete walkthrough for installing ML4W OS directly on physical hardware (typ
 - Target system with 200GB+ free space
 - Backup of important data ⚠️
 - [ML4W OS ISO](https://ml4w.com/iso/ml4w-os/ml4w-os-2.15.1-x86_64.iso) (v2.15.1 x86_64)
+- [Ventoy](https://sourceforge.net/projects/ventoy/files/v1.1.17/) - A bootable USB solution for creating multi-boot installations
 
 #### Installation Steps
 
@@ -69,7 +70,7 @@ sudo pacman -S gparted
 
 ##### Step 3: Install ML4W Dotfiles (Optional)
 
-To customize your ML4W installation with community dotfiles and configurations, visit the [ML4W Dotfiles Installer](https://github.com/mylinuxforwork/ml4w-dotfiles-installer) repository for setup instructions and available configurations.
+To customize your ML4W installation with community dotfiles and configurations, visit the [ML4W Dotfiles Installer](https://github.com/mylinuxforwork/ml4w-dotfiles-installer) repository for setup instructions.
 
 ---
 
