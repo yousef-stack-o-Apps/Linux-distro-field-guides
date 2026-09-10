@@ -77,7 +77,7 @@ To customize your ML4W installation with community dotfiles and configurations, 
 
 ---
 
-## Installing Debian (GNOME) and adding Hyperland
+## Installing Debian (GNOME) and adding window manager
 
 This section walks through installing Debian with the GNOME desktop and includes an optional installer from the DankLinux project (AvengeMedia/DankMaterialShell).
 
