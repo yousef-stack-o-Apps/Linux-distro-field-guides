@@ -83,7 +83,7 @@ This section walks through installing Debian with the GNOME desktop and includes
 
 Step 1: Grab the ISO and Flash It
 
-- Download the official Debian netinst ISO (use the non-free firmware image if your hardware needs it).
+- Download the official Debian netinst ISO from the Debian website: https://www.debian.org/CD/netinst/ (choose the non-free firmware image if your hardware needs proprietary firmware).
 - Flash the ISO to a USB drive using Ventoy, Rufus, or dd.
 
 Step 2: Boot Up and Launch the Installer
