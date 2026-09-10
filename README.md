@@ -13,6 +13,7 @@ This repository contains battle-tested installation procedures and workarounds f
 
 - [Supported Distros](#supported-distros)
 - [Featured Guides](#featured-guides)
+- [Installing Debian (GNOME)](#installing-debian-gnome)
 - [Quick Start](#quick-start)
 - [Contributing](#contributing)
 
@@ -72,9 +73,88 @@ sudo pacman -S gparted
 
 ##### Step 3: Install ML4W Dotfiles (Optional)
 
-To customize your ML4W installation with community dotfiles and configurations, visit the [ML4W Dotfiles Installer](https://github.com/mylinuxforwork/ml4w-dotfiles-installer) repository for setup instructions.
+To customize your ML4W installation with community dotfiles and configurations, visit the [ML4W Dotfiles Installer](https://github.com/mylinuxforwork/ml4w-dotfiles-installer) repository for setup instructions and usage.
 
 ---
+
+## Installing Debian (GNOME)
+
+This section walks through installing Debian with the GNOME desktop and includes an optional installer from the DankLinux project (AvengeMedia/DankMaterialShell).
+
+Step 1: Grab the ISO and Flash It
+
+- Download the official Debian netinst ISO (use the non-free firmware image if your hardware needs it).
+- Flash the ISO to a USB drive using Ventoy, Rufus, or dd.
+
+Step 2: Boot Up and Launch the Installer
+
+- Plug the USB into your target machine, reboot, and open your BIOS/UEFI boot menu (F12, F11, Esc, or Del on many systems).
+- Select the USB drive, then choose "Graphical install" (or the standard text installer).
+
+Step 3: Language, Region, and Network
+
+- Select your language, country/location, and keyboard layout.
+- The installer will attempt to configure your network interface automatically.
+
+  Note: If you are installing over Wi‑Fi and the installer doesn't recognize your wireless card (missing drivers/firmware), plug in an Ethernet cable for the installation phase.
+
+- Enter a hostname for your machine (e.g., `debian-dev`).
+
+Step 4: Users and Passwords
+
+- Root account: Debian will ask if you want to set a root password. Leaving it blank disables root and grants sudo to your primary user (recommended by many).
+- Create a user: enter your full name, choose a lowercase username, and set a secure password.
+- Set your correct timezone.
+
+Step 5: Partitioning Your Drives
+
+- For beginners, choose Guided → use entire disk (back up first!).
+- Select your target drive and the partitioning scheme ("All files in one partition" is fine for most users).
+- Review, Finish partitioning, and write changes to disk.
+
+Step 6: Package Manager and Tasksel (Choose GNOME)
+
+- After the base system installs you'll be prompted to choose an APT mirror — pick your country and a reliable mirror.
+- When tasksel appears, select the "GNOME" desktop environment to install a full GNOME desktop.
+
+If you missed GNOME during install, after first boot you can add it:
+
+```bash
+sudo apt update
+sudo apt install tasksel
+sudo tasksel install gnome-desktop
+```
+
+Step 7: Finish and Reboot
+
+- Install the GRUB bootloader to the primary drive when prompted.
+- Finish, remove the USB when instructed, and boot into your new GNOME desktop.
+
+Optional: Install DankMaterialShell (AvengeMedia/DankMaterialShell)
+
+The DankMaterialShell project provides a modern desktop shell and an installer used across many distributions. Their repository is here:
+
+- https://github.com/AvengeMedia/DankMaterialShell
+
+One-line installer used by the project:
+
+```bash
+curl -fsSL https://install.danklinux.com | sh
+```
+
+Important security note: piping a remote script straight to sh runs code you haven't inspected. It's convenient but risky. If you choose to use it, consider these safer steps first:
+
+1. Download and inspect the script:
+
+```bash
+curl -fsSL -o install-danklinux.sh https://install.danklinux.com
+less install-danklinux.sh
+```
+
+2. Verify checksums or signatures if the project provides them.
+3. Run the script in a VM or disposable environment first, or run it as a normal user before using sudo.
+
+If you want, I can add a short, dedicated Debian + GNOME guide file (docs/debian-gnome.md) or commit this README update directly to this repository.
 
 ## Troubleshooting
 
@@ -86,7 +166,7 @@ We welcome contributions! Whether it's a driver fix, installer workaround, or ne
 
 1. [Fork the repository](https://github.com/yousef-stack-o-Apps/Linux-distro-field-guides/fork)
 2. Create a feature branch (`git checkout -b feature/new-guide`)
-3. Commit your changes (`git commit -m 'Add: ML4W wireless fix guide'`)
+3. Commit your changes (`git commit -m 'Add: Debian GNOME install guide and DankMaterialShell reference'`)
 4. Push to the branch (`git push origin feature/new-guide`)
 5. Open a [Pull Request](https://github.com/yousef-stack-o-Apps/Linux-distro-field-guides/pulls)
 
