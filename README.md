@@ -7,7 +7,7 @@
 
 ## Overview
 
-This repository contains battle-tested installation procedures and workarounds for various Linux distributions. Each guide covers real-world challenges that official documentation often overlooks, including hardware compatibility, post-install optimization, and multi-boot configurations.
+This repository contains battle-tested installation procedures and workarounds for various Linux distributions. Each guide covers real-world challenges that official documentation often overlooks.
 
 ## Table of Contents
 
@@ -32,6 +32,7 @@ A complete walkthrough for installing ML4W OS directly on physical hardware (typ
 - USB drive (8GB+)
 - Target system with 200GB+ free space
 - Backup of important data ⚠️
+- [ML4W OS ISO](https://ml4w.com/iso/ml4w-os/ml4w-os-2.15.1-x86_64.iso) (v2.15.1 x86_64)
 
 #### Installation Steps
 
@@ -65,6 +66,10 @@ sudo pacman -S gparted
 2. Locate the ML4W partition
 3. Resize to desired size (e.g., 170 GB)
 4. Allocate freed space for additional OS installations or data
+
+##### Step 3: Install ML4W Dotfiles (Optional)
+
+To customize your ML4W installation with community dotfiles and configurations, visit the [ML4W Dotfiles Installer](https://github.com/mylinuxforwork/ml4w-dotfiles-installer) repository for setup instructions and available configurations.
 
 ---
 
