@@ -77,7 +77,7 @@ To customize your ML4W installation with community dotfiles and configurations, 
 
 ---
 
-## Installing Debian (GNOME)
+## Installing Debian (GNOME) and adding Hyperland
 
 This section walks through installing Debian with the GNOME desktop and includes an optional installer from the DankLinux project (AvengeMedia/DankMaterialShell).
 
@@ -144,16 +144,17 @@ curl -fsSL https://install.danklinux.com | sh
 
 Important security note: piping a remote script straight to sh runs code you haven't inspected. It's convenient but risky. If you choose to use it, consider these safer steps first:
 
-1. Download and inspect the script:
+1. Download with automation :
 
 ```bash
 curl -fsSL -o install-danklinux.sh https://install.danklinux.com
 less install-danklinux.sh
 ```
 
-2. Verify checksums or signatures if the project provides them.
-3. Run the script in a VM or disposable environment first, or run it as a normal user before using sudo.
-
+2. choose what windowmanger you want e.g niri or mango
+3. choose the terminal you want e.g ghostly or kitty or alacritty
+4.choose the dependicies it chooses by default i recomend choosing the extras as well
+5.
 If you want, I can add a short, dedicated Debian + GNOME guide file (docs/debian-gnome.md) or commit this README update directly to this repository.
 
 ## Troubleshooting
