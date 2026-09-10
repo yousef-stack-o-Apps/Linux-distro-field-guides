@@ -57,6 +57,8 @@ Once started, the Wi-Fi icon will appear in the system tray. Connect to your net
 
 The installer defaults to a full-disk install. After installation completes, shrink the ML4W partition:
 
+**⏱️ Note:** The ML4W installation will take approximately **3GB+** of disk space once complete.
+
 **Install GParted:**
 ```bash
 sudo pacman -S gparted
